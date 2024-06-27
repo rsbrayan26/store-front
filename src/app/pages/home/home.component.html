@@ -1,0 +1,15 @@
+<main class="contenedor">
+  <h1>Nuestros Productos</h1>
+  <div class="grid">
+    <div class="producto" *ngFor="let item of products">
+      <a [routerLink]="['/producto',item.id]">
+        <img class="producto__imagen" src="{{item.src}}" alt="{{item.name}}" />
+        <div class="producto__informacion">
+          <p class="producto__nombre">{{item.name}}</p>
+          <p class="producto__precio">{{item.price|currency:"USD"}}</p>
+        </div>
+      </a>
+    </div>
+    <!--.producto-->
+  </div>
+</main>
